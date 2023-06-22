@@ -1,0 +1,28 @@
+<p>login works!</p>
+
+<div class="card-body">
+    <div class="card">
+        <h1 class="text-center mt-1">
+            Login
+        </h1>
+
+        <form action="" class="p-3">
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input #emailControl="ngModel" appEmailvalidator appHover color="green" [(ngModel)]="email" name="name" type="email" class="form-control" id="email" >
+                <span>
+                    {{emailControl.errors | json}}
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input appHover color="steelblue" [(ngModel)]="password" name="name" type="password" class="form-control" id="password" >
+            </div>
+            <div class="form-group mt-2 text-center">
+                <button class="btn btn-primary" (click)="login()">login</button>
+            </div>
+        </form>
+
+    </div>
+</div>
